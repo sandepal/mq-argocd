@@ -15,7 +15,7 @@ apiVersion: mq.ibm.com/v1beta1
 kind: QueueManager
 metadata:
   name: {{QMGR_NAME_1}}
-  namespace: 
+  namespace: ucqm-demo
 spec:
   version: 9.4.1.0-r2
   license:

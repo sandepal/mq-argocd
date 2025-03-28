@@ -2,7 +2,7 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: uniformcluster
-  namespace: 
+  namespace: ucqm-demo
 data:
   uniformcluster.mqsc: |-
     define channel('+AUTOCL+_+QMNAME+') chltype(clusrcvr) trptype(tcp) conname('+INICONNAME+') cluster('+AUTOCL+') SSLCAUTH(OPTIONAL) SSLCIPH('ANY_TLS12_OR_HIGHER') HBINT(1) SHORTRTY(200) SHORTTMR(5) replace
@@ -16,9 +16,9 @@ data:
     REFRESH SECURITY TYPE(CONNAUTH)
   allqms.ini: |-
     AutoCluster:
-      Repository2Conname={{QMGR_NAME_2}}-ibm-mq.(1414)
+      Repository2Conname={{QMGR_NAME_2}}-ibm-mq.ucqm-demo(1414)
       Repository2Name={{QMGR_NAME_2}}
-      Repository1Conname={{QMGR_NAME_1}}-ibm-mq.(1414)
+      Repository1Conname={{QMGR_NAME_1}}-ibm-mq.ucqm-demo(1414)
       Repository1Name={{QMGR_NAME_1}}
       ClusterName=UNICLUSTER
       Type=Uniform
@@ -29,19 +29,19 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: uniformcluster-{{QMGR_NAME_1}}
-  namespace: 
+  namespace: ucqm-demo
 data:
   qm.ini: |-
     Variables:
-      INICONNAME={{QMGR_NAME_1}}-ibm-mq.(1414)
+      INICONNAME={{QMGR_NAME_1}}-ibm-mq.ucqm-demo(1414)
 ---
 kind: ConfigMap
 apiVersion: v1
 metadata:
   name: uniformcluster-{{QMGR_NAME_2}}
-  namespace: 
+  namespace: ucqm-demo
 data:
   qm.ini: |-
     Variables:
-      INICONNAME={{QMGR_NAME_2}}-ibm-mq.(1414)
+      INICONNAME={{QMGR_NAME_2}}-ibm-mq.ucqm-demo(1414)
 
