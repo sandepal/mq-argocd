@@ -16,10 +16,10 @@ data:
     REFRESH SECURITY TYPE(CONNAUTH)
   allqms.ini: |-
     AutoCluster:
-      Repository2Conname={{QMGR_NAME_2}}-ibm-mq.ucqm-demo(1414)
-      Repository2Name={{QMGR_NAME_2}}
-      Repository1Conname={{QMGR_NAME_1}}-ibm-mq.ucqm-demo(1414)
-      Repository1Name={{QMGR_NAME_1}}
+      Repository2Conname=ucqm2-ibm-mq.ucqm-demo(1414)
+      Repository2Name=ucqm2
+      Repository1Conname=ucqm1-ibm-mq.ucqm-demo(1414)
+      Repository1Name=ucqm1
       ClusterName=UNICLUSTER
       Type=Uniform
     SSL:
@@ -28,20 +28,20 @@ data:
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: uniformcluster-{{QMGR_NAME_1}}
+  name: uniformcluster-ucqm1
   namespace: ucqm-demo
 data:
   qm.ini: |-
     Variables:
-      INICONNAME={{QMGR_NAME_1}}-ibm-mq.ucqm-demo(1414)
+      INICONNAME=ucqm1-ibm-mq.ucqm-demo(1414)
 ---
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: uniformcluster-{{QMGR_NAME_2}}
+  name: uniformcluster-ucqm2
   namespace: ucqm-demo
 data:
   qm.ini: |-
     Variables:
-      INICONNAME={{QMGR_NAME_2}}-ibm-mq.ucqm-demo(1414)
+      INICONNAME=ucqm2-ibm-mq.ucqm-demo(1414)
 
