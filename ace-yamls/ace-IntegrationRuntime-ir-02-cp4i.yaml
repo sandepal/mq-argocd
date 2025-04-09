@@ -1,0 +1,32 @@
+apiVersion: appconnect.ibm.com/v1beta1
+kind: IntegrationRuntime
+metadata: 
+  name: ir-02  
+  namespace: cp4i
+spec:
+  barURL:
+    - https://github.com/sandepal/mq-argocd/raw/refs/heads/main/cicd-bars/generate_test_data_server.bar
+  configurations:
+    - ace-ccdt
+    - ace-mqkey.kdb
+    - ace-mqkey.sth
+    - ace-serverconf
+    - generate-test-data-mqpolicy
+    - github-creds
+  flowType:
+    toolkitFlow: true
+  license:
+    accept: true
+    license: L-KPRV-AUG9NC
+    use: CloudPakForIntegrationNonProductionFREE
+  logFormat: basic
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: runtime
+          resources:
+            requests:
+              cpu: 300m
+              memory: 368Mi
+  version: 13.0.2.2-r2

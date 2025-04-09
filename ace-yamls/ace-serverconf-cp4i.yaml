@@ -1,0 +1,4 @@
+serverConfVersion: 1
+BrokerRegistry:
+ mqKeyRepository: '/home/aceuser/keystores/ace-mqkey'
+ mqCCDT: '/home/aceuser/ace-server/mqccdt/mqccdt.json'
