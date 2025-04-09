@@ -13,6 +13,7 @@ spec:
     - ace-serverconf
     - generate-test-data-mqpolicy
     - github-creds
+    - ir-02-ir-adminssl
   flowType:
     toolkitFlow: true
   license:
