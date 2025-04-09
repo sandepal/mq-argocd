@@ -2,7 +2,7 @@ apiVersion: appconnect.ibm.com/v1beta1
 kind: Configuration
 metadata:
   name: ace-serverconf
-  namespace: cp4i
+  namespace: ucqm-demo
 spec:
   contents: c2VydmVyQ29uZlZlcnNpb246IDEKQnJva2VyUmVnaXN0cnk6CiBtcUtleVJlcG9zaXRvcnk6ICcvaG9tZS9hY2V1c2VyL2tleXN0b3Jlcy9hY2UtbXFrZXknCiBtcUNDRFQ6ICcvaG9tZS9hY2V1c2VyL2FjZS1zZXJ2ZXIvbXFjY2R0L21xY2NkdC5qc29uJw==
   type: serverconf

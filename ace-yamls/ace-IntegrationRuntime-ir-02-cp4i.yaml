@@ -2,7 +2,7 @@ apiVersion: appconnect.ibm.com/v1beta1
 kind: IntegrationRuntime
 metadata: 
   name: ir-02  
-  namespace: cp4i
+  namespace: ucqm-demo
 spec:
   barURL:
     - https://github.com/sandepal/mq-argocd/raw/refs/heads/main/cicd-bars/generate_test_data_server.bar
